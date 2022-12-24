@@ -23,6 +23,7 @@ public class PipeSpawnScript : MonoBehaviour
         if (timer < Spawnrate)
         {
             timer += Time.deltaTime;
+            
         }
         else
         {
@@ -35,6 +36,7 @@ public class PipeSpawnScript : MonoBehaviour
 
     void Spawnpipe()
     {
+        
         float Bottompoint = transform.position.y - Height_Off_Set;
         float Toppoint = transform.position.y + Height_Off_Set;
         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(Bottompoint, Toppoint), 0), transform.rotation);   
