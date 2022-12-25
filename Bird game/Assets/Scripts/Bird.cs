@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this script programs the function and movement of the bird game object 
 public class Bird : MonoBehaviour
 {
     public Rigidbody2D myRigidbody2D;
