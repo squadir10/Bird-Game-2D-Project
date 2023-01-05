@@ -9,6 +9,7 @@ public class Bird : MonoBehaviour
     public Rigidbody2D myRigidbody2D;
     public float flapStrength;
     public LogicManager logic;
+    public bool bird_status = true;
     
     void Start()
     {
@@ -19,7 +20,7 @@ public class Bird : MonoBehaviour
     void Update()
     {
         // when spacebar is hit, make the bird fly 
-        if (Input.GetKeyDown(KeyCode.Space) == true)
+        if (Input.GetKeyDown(KeyCode.Space) && bird_status)
         {
             myRigidbody2D.velocity = Vector2.up * flapStrength; //bird flies up on y-axis by a force of 10 
         }
@@ -30,6 +31,7 @@ public class Bird : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         logic.gameOver();
+        bird_status = false; 
     }
 }
 

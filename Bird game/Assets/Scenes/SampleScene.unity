@@ -235,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 514068042}
   m_Layer: 5
-  m_Name: Game Over screen
+  m_Name: Game Over Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,6 +470,7 @@ MonoBehaviour:
   myRigidbody2D: {fileID: 724607583}
   flapStrength: 20
   logic: {fileID: 0}
+  bird_status: 1
 --- !u!58 &724607587
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -483,9 +484,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.6, y: 0.78}
+  m_Offset: {x: -1.65, y: -0.87}
   serializedVersion: 2
-  m_Radius: 4.94
+  m_Radius: 3.54
 --- !u!1 &1013183579
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,8 +607,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126209677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.37, y: -0.06694168, z: -0.047916926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 39.2, y: -0.06694168, z: -0.047916926}
+  m_LocalScale: {x: 1.2121, y: 1.2121, z: 1.2121}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -826,7 +827,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1429036653}
         m_TargetAssemblyTypeName: LogicManager, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: restartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
