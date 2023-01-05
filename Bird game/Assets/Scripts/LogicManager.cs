@@ -11,9 +11,13 @@ public class LogicManager : MonoBehaviour
     
     public int PlayerScore; //variable called playerscore
     public Text score; //reference to the UI text called "score text"
+    public GameObject gameOverScreen;
+    
+   
+
     [ContextMenu("Increase score")] //I use this to make sure this is working properly without having 
     //to involve the whole game itself. I can just test this specific element itself.
-    
+   
     //this function is in charge of adding the score
     public void add_score(int Score_To_Add) 
     {
@@ -24,9 +28,16 @@ public class LogicManager : MonoBehaviour
         
     }
 
-    public void restart()
+    public void restartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void gameOver()
+    {
+        gameOverScreen.SetActive(true);
+    }
+
+    
 
 }
