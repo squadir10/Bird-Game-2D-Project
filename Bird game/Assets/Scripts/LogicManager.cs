@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //to access more options such as text in UI
+using UnityEngine.SceneManagement; // to control scenes 
+
 
 //this script is in charge of keeping score
 public class LogicManager : MonoBehaviour
@@ -20,6 +22,11 @@ public class LogicManager : MonoBehaviour
         score.text = PlayerScore.ToString(); //change the UI to that of the playerscore so it is constantly updated
         
         
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
